@@ -1,5 +1,5 @@
 <template>
-  <div class="show-card">
+  <div class="Dashboard">
     <div v-if="!isLoading">
       <div v-if="!isLoading">
         <div v-if="tvShows">
@@ -17,10 +17,10 @@
                 >
                   <b-col
                     id="my-col"
-                    v-for="key in shows[1].slice(0, 8)"
-                    :key="key.id"
+                    v-for="show in shows[1]"
+                    :key="show.id"
                   >
-                    <Showcard :show="key"></Showcard>
+                    <Showcard :show="show"></Showcard>
                   </b-col>
                 </b-row>
               </b-container>
@@ -42,6 +42,7 @@ import Showcard from "@/components/Showcard.vue";
 export default {
   name: "Dashboard",
 
+
   components: {
     Showcard,
   },
@@ -62,9 +63,11 @@ export default {
   methods: {
     async getShow() {
       this.isLoading = true;
+     
 
       try {
         await this.$store.dispatch("getShow");
+     
       } catch (error) {
         this.error = error.message;
       }

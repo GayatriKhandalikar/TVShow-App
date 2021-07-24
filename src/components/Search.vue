@@ -5,7 +5,7 @@
         <b-container>
           <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="4" align-h="center">
             <b-col id="my-col" v-for="show in shows" :key="show.id">
-              <Showcard :show="show"></Showcard>
+              <Showcard :show ="show"></Showcard>
             </b-col>
           </b-row>
         </b-container>
@@ -29,7 +29,6 @@ export default {
 
   data() {
     return {
-      searchInput: this.$route.params.searchInput,
       isLoading: false,
       error: null,
       shows: [],
@@ -40,16 +39,18 @@ export default {
     ...mapState(["searchResults"]),
   },
 
-  mounted() {
-    this.getSearchResults();
-  },
+created(){
+ this.getSearchResults(this.$route.params.searchInput);
+},
+  
 
   methods: {
-    async getSearchResults() {
-      if (this.searchInput.trim() !== "") {
+    async getSearchResults(searchInput) {
+      if (searchInput.trim() !== "") {
         this.isLoading = true;
         try {
-          await this.$store.dispatch("getSearchResults", this.searchInput);
+         
+          await this.$store.dispatch("getSearchResults", searchInput);
         } catch (error) {
           this.error = error.message;
         }

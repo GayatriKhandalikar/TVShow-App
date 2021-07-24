@@ -7,6 +7,7 @@ module.exports = {
       '!**/*.config.js',
       '!**/vendor/**',
       '!**/index.js/**',
+      '!**/src/store/index.js/**',
       '!**/tests/unit/**',
       '!**/tests/e2e/**',
       '!**/coverage/**',
@@ -15,6 +16,13 @@ module.exports = {
       // '!**/service/apiServices.js**',
        '!**/store/store.js**',
   
+    ],
+    transform: {
+      '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+      '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
+    },
+    testPathIgnorePatterns: [
+      '<rootDir>/test/e2e'
     ],
     coverageThreshold: {
       global: {

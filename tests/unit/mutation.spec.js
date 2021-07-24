@@ -1,6 +1,4 @@
 import mutations from '@/store/mutations';
-
-
 describe('store mutations', () => {
   it('add Shows to state', () => {
     const state = {

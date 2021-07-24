@@ -3,7 +3,6 @@ import Header from "@/components/Header.vue";
 import BootstrapVue from "bootstrap-vue";
 import VueRouter from "vue-router";
 
-
 describe("In Header Component", () => {
   let wrapper;
 

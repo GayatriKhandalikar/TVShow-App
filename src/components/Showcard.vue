@@ -1,11 +1,10 @@
 <template>
 <div>
- 
   <div class="show-card">
     <div v-if="show">
       <b-card
       :title="show.name"
-    :img-src="show.image.medium"
+    :img-src="show.image && show.image.medium"
     img-alt="No Image Available"
     img-top
     tag="article"
@@ -13,9 +12,9 @@
     class="mb-2"
      
     >
-     <b-card-text><b>Rating</b> : {{show.rating.average != null ? show.rating.average : 'NA'}}</b-card-text>
+     <b-card-text><b>Rating</b> : {{show.rating && show.rating.average != null ? show.rating && show.rating.average : 'NA'}}</b-card-text>
 
-      <b-button variant="primary" id="getSHowDetailsBtn" @click="getShowDetails(show.id)"
+      <b-button variant="primary" id="getShowDetailsBtn" @click="getShowDetails(show.id)"
         >Show Details</b-button
       >
     </b-card>
@@ -35,13 +34,15 @@
 <script>
 export default {
 
-  name: "Showcard",
-  props: ["show"],
+  name: 'Showcard',
+  props: {
+    show: {}
+  },
 
   methods: {
     getShowDetails(id) {
  
-     this.$router.push({ name: "ShowDetails", params: { id } });
+     this.$router.push({ name: 'ShowDetails', params: { id } });
     },
   },
 };

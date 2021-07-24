@@ -8,18 +8,18 @@ export default {
   async getShow(context) {
     try {
       const response = await getShowsService();
-
+      
       const uniqueGenreSet = new Set([]);
       const displayShowsBygene = new Map();
-
       response.data.forEach((element) => {
         element.genres.forEach((key) => {
           uniqueGenreSet.add(key);
         });
+        
       });
 
       let sortByGenre = Array.from(uniqueGenreSet);
-
+      
       for (let index = 0; index < 6; index++) {
         const genreSorting = [];
         response.data.forEach((element) => {
@@ -32,6 +32,7 @@ export default {
         );
         displayShowsBygene.set(sortByGenre[index], genreSorting);
       }
+     // console.log(displayShowsBygene)
       context.commit("setShows", displayShowsBygene);
     } catch (error) {
       console.log(error.message);
@@ -53,10 +54,9 @@ export default {
     try {
       const result = [];
       const response = await getSearchResultsService(searchInput);
-      response.data.forEach((element) => {
+      response.data.forEach(function (element) {
         result.push(element.show);
       });
-
       context.commit("setSearchResults", result);
     } catch (error) {
       console.log(error.message);

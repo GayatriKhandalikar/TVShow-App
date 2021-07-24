@@ -1,12 +1,8 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
 import Footer from '@/components/Footer.vue'
 
-
 describe('In Footer Component', () =>{
     let wrapper;
-
-    
-
     beforeEach(() => {
 
         const localVue = createLocalVue();

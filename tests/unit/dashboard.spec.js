@@ -6,13 +6,13 @@ import Vuex from 'vuex';
 describe('In Dashboard Component ',()=>{
     let wrapper;
     const state = {
-        tvShows:{
+        tvShows:[{
             id: 1,
     url: "https://www.tvmaze.com/shows/1/under-the-dome",
     name: "Under the Dome",
     type: "Scripted",
     language: "English",
-        },
+        }],
     };
 
     const actions = {
@@ -45,13 +45,18 @@ describe('In Dashboard Component ',()=>{
     });
 
     it('should render the correct markup', ()=>{
-        expect(wrapper.html()).toContain('<div class="show-card">');
-
-        
+        expect(wrapper.html()).toContain('<div class="Dashboard">');
     });
 
     it('getShow action should be called on calling getShow method', ()=>{
-        wrapper.vm.getShow();
-        expect(actions.getShow).toHaveBeenCalled();
+            // const t = () => {
+            //   throw new TypeError();
+            // };
+            // expect(t).toThrow(TypeError);
+            wrapper.vm.getShow();
+            expect(actions.getShow).toHaveBeenCalled();
+           
+          
+       
     });
- })
+})

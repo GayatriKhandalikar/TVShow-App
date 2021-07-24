@@ -48,17 +48,19 @@
 
 <script>
 export default {
+  name: "Header",
   data() {
     return {
       searchInput: null,
     };
   },
-  name: "Header",
+  
 
   methods: {
     searchQuery(searchInput) {
-      this.$router.push({ name: "Search", params: { searchInput } });
-      this.searchInput = "";
+      
+      this.$router && this.$router.push({ name: "Search", params: { searchInput } });
+     // this.searchInput = "";
     },
   },
 };
