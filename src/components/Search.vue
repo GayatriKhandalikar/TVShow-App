@@ -5,7 +5,7 @@
         <b-container>
           <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="4" align-h="center">
             <b-col id="my-col" v-for="show in shows" :key="show.id">
-              <Showcard :show ="show"></Showcard>
+              <Showcard :show ="show" ></Showcard>
             </b-col>
           </b-row>
         </b-container>

@@ -94,8 +94,4 @@ export default {
   padding-left: 12px;
   border-bottom: 0.25rem;
 }
-
-/* .image-cursor{
-    cursor: pointer;
-} */
 </style>

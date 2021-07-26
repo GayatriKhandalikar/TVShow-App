@@ -59,8 +59,4 @@ export default {
 .card-body {
   padding: 0.25rem;
 }
-
-/* .image-cursor{
-    cursor: pointer;
-} */
 </style>

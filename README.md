@@ -19,7 +19,6 @@ npm run build
 ```
 npm run test:unit
 ```
-note :- Please run test cases by removing slice(0,8) from dashboard
 
 ### Lints and fixes files
 ```

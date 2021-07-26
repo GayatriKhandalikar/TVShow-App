@@ -8,7 +8,6 @@
           <b-row>
             <b-col>
               <router-link id="dashboardroute" to="/">Dashboard</router-link>
-              <!-- <router-link id="aboutroute" to="/about">About</router-link> -->
             </b-col>
             <b-col>
               <b-navbar-nav class="ml-auto">
@@ -60,7 +59,7 @@ export default {
     searchQuery(searchInput) {
       
       this.$router && this.$router.push({ name: "Search", params: { searchInput } });
-     // this.searchInput = "";
+      this.searchInput = "";
     },
   },
 };

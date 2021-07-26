@@ -3,12 +3,6 @@ import axiosInstance from '../../src/service/axiosConfig.js';
 import axios  from "axios";
 import {mount} from "@vue/test-utils";
 
-
-// const wrapper = mount(axiosInstance, {
-//     global: { 
-//       mocks: { axios } 
-//     }
-//   })
 jest.mock('../../src/service/axiosConfig.js', () => ({
     baseURL: 'https://api.tvmaze.com',
     get: jest.fn(),

@@ -4,6 +4,8 @@ import Dashboard from "../views/Dashboard.vue"
 import ShowDetails from "../components/ShowDetails.vue"
 import Search from "../components/Search.vue"
 import About from "../views/About.vue"
+import PageNotFound from "../components/PageNotFound.vue"
+
 
 Vue.use(VueRouter);
 
@@ -22,10 +24,15 @@ const routes = [
   path: '/search',
   name: 'Search',
   props: true,
-  component: Search
+  reuse: true,
+  component: Search,
 
 },
-
+{
+  path:'*',
+  name: 'PageNotFound',
+  component: PageNotFound
+},
 {
   path: '/about',
   name: 'About',

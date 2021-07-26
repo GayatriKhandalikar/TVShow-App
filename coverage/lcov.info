@@ -1,16 +1,16 @@
 TN:
-SF:D:\vue project\tv-show-app\src\App.vue
+SF:D:\vue project\New folder\tv-show-app\src\App.vue
 FNF:0
 FNH:0
-DA:19,1
-DA:20,1
+DA:10,1
+DA:11,1
 LF:2
 LH:2
 BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\main.js
+SF:D:\vue project\New folder\tv-show-app\src\main.js
 FN:21,(anonymous_0)
 FNF:1
 FNH:0
@@ -27,24 +27,25 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\components\Header.vue
-FN:52,(anonymous_1)
-FN:60,(anonymous_2)
+SF:D:\vue project\New folder\tv-show-app\src\components\Header.vue
+FN:51,(anonymous_1)
+FN:59,(anonymous_2)
 FNF:2
 FNH:2
 FNDA:3,(anonymous_1)
 FNDA:1,(anonymous_2)
-DA:53,3
+DA:52,3
+DA:61,1
 DA:62,1
-LF:2
-LH:2
-BRDA:62,0,0,1
-BRDA:62,0,1,0
+LF:3
+LH:3
+BRDA:61,0,0,1
+BRDA:61,0,1,0
 BRF:2
 BRH:1
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\components\Search.vue
+SF:D:\vue project\New folder\tv-show-app\src\components\Search.vue
 FN:30,(anonymous_1)
 FN:42,(anonymous_2)
 FN:48,(anonymous_3)
@@ -73,7 +74,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\components\ShowDetails.vue
+SF:D:\vue project\New folder\tv-show-app\src\components\ShowDetails.vue
 FN:58,(anonymous_1)
 FN:70,(anonymous_2)
 FN:77,(anonymous_3)
@@ -97,7 +98,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\components\Showcard.vue
+SF:D:\vue project\New folder\tv-show-app\src\components\Showcard.vue
 FN:43,(anonymous_1)
 FNF:1
 FNH:1
@@ -109,19 +110,19 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\router\index.js
+SF:D:\vue project\New folder\tv-show-app\src\router\index.js
 FNF:0
 FNH:0
-DA:8,1
 DA:10,1
-DA:37,1
+DA:12,1
+DA:44,1
 LF:3
 LH:3
 BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\service\Service.js
+SF:D:\vue project\New folder\tv-show-app\src\service\Service.js
 FN:3,getShowsService
 FN:7,getShowDetailsService
 FN:12,getSearchResultsService
@@ -139,7 +140,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\service\axiosConfig.js
+SF:D:\vue project\New folder\tv-show-app\src\service\axiosConfig.js
 FNF:0
 FNH:0
 DA:4,0
@@ -151,7 +152,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\store\actions.js
+SF:D:\vue project\New folder\tv-show-app\src\store\actions.js
 FN:8,(anonymous_0)
 FN:14,(anonymous_1)
 FN:15,(anonymous_2)
@@ -214,7 +215,7 @@ BRF:4
 BRH:2
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\store\index.js
+SF:D:\vue project\New folder\tv-show-app\src\store\index.js
 FNF:0
 FNH:0
 DA:6,0
@@ -224,7 +225,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\store\mutations.js
+SF:D:\vue project\New folder\tv-show-app\src\store\mutations.js
 FN:3,(anonymous_0)
 FN:6,(anonymous_1)
 FN:9,(anonymous_2)
@@ -242,7 +243,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\vue project\tv-show-app\src\views\Dashboard.vue
+SF:D:\vue project\New folder\tv-show-app\src\views\Dashboard.vue
 FN:49,(anonymous_1)
 FN:59,(anonymous_2)
 FN:64,(anonymous_3)
