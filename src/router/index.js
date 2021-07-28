@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Dashboard from "../views/Dashboard.vue"
 import ShowDetails from "../components/ShowDetails.vue"
 import Search from "../components/Search.vue"
-import About from "../views/About.vue"
+
 import PageNotFound from "../components/PageNotFound.vue"
 
 
@@ -33,16 +33,13 @@ const routes = [
   name: 'PageNotFound',
   component: PageNotFound
 },
-{
-  path: '/about',
-  name: 'About',
-  component: About
 
-}
 ];
 
 const router = new VueRouter({
-  routes,
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
 });
 
 export default router;

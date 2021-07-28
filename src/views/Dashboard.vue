@@ -4,9 +4,8 @@
       <div v-if="!isLoading">
         <div v-if="tvShows">
           <b-container>
-            <div v-for="shows in tvShows" :key="shows.key">
+            <div v-for="shows in tvShows.entries()" :key="shows.key">
               <h1 class="heading">{{ shows[0] }}</h1>
-
               <b-container>
                 <b-row
                   cols="1"

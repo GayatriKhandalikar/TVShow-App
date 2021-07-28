@@ -3,6 +3,7 @@ import ShowDetails from "@/components/ShowDetails.vue";
 import BootstrapVue from "bootstrap-vue";
 import Vuex from 'vuex';
 
+
 describe('In ShowDetails Component', () => {
     let wrapper;
 
@@ -21,6 +22,10 @@ describe('In ShowDetails Component', () => {
     ],
     status: "Ended",
     runtime: 60, 
+    image: {
+        medium: "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
+        original: "https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg"
+    },
             }
         };
         
@@ -66,6 +71,9 @@ describe('In ShowDetails Component', () => {
         wrapper.vm.getShowDetailsById('1');
         expect(actions.getShowDetailsById).toHaveBeenCalled();
     });
-
+    it('Cheak flags for image find',async()=>{
+      await  expect(typeof isImageFound === 'boolean').toBe(false)
+      
+    })
    
 });

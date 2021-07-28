@@ -6,6 +6,7 @@ module.exports = {
       '!**/node_modules/**',
       '!**/*.config.js',
       '!**/vendor/**',
+      '!**/main.js',
       '!**/index.js/**',
       '!**/src/store/index.js/**',
       '!**/tests/unit/**',

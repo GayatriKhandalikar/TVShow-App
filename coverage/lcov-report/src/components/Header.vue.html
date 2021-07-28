@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -157,7 +157,18 @@
 <a name='L99'></a><a href='#L99'>99</a>
 <a name='L100'></a><a href='#L100'>100</a>
 <a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -208,9 +219,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -218,7 +230,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -261,48 +283,51 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
   &lt;div class="header"&gt;
     &lt;b-navbar toggleable="md" type="dark" fixed="top" id="Header"&gt;
-      &lt;img alt="Vue logo" src="../assets/tvm-header-logo.png" /&gt;
+      &lt;div class="row mx-md-n5"&gt;
+        &lt;div class="col px-md-3"&gt;
+          &lt;img alt="Vue logo" src="../assets/tvm-header-logo.png" /&gt;
+        &lt;/div&gt;
+        &lt;div class="col px-md-2"&gt;
+          &lt;router-link to="/"&gt;Dashboard&lt;/router-link&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
       &lt;b-navbar-toggle target="nav-collapse"&gt;&lt;/b-navbar-toggle&gt;
       &lt;b-collapse id="nav-collapse" is-nav class="app-navs"&gt;
         &lt;b-navbar-nav&gt;
-          &lt;b-row&gt;
-            &lt;b-col&gt;
-              &lt;router-link id="dashboardroute" to="/"&gt;Dashboard&lt;/router-link&gt;
-            &lt;/b-col&gt;
-            &lt;b-col&gt;
-              &lt;b-navbar-nav class="ml-auto"&gt;
-                &lt;b-nav-form&gt;
-                  &lt;form @submit.prevent&gt;
-                    &lt;b-row&gt;
-                      &lt;b-col cols="10"&gt;
-                        &lt;b-form-input
-                          size="sm"
-                          placeholder="Search"
-                          v-model="searchInput"
-                        &gt;&lt;/b-form-input&gt;
-                      &lt;/b-col&gt;
-&nbsp;
-                      &lt;b-col cols="2"&gt;
-                        &lt;b-button
-                          size="sm"
-                          id="searchShows"
-                          class="my-2 my-sm-0"
-                          type="submit"
-                          variant="success"
-                          @click="searchQuery(searchInput)"
-                          &gt;Search&lt;/b-button
-                        &gt;
-                      &lt;/b-col&gt;
-                    &lt;/b-row&gt;
-                  &lt;/form&gt;
-                &lt;/b-nav-form&gt;
-              &lt;/b-navbar-nav&gt;
-            &lt;/b-col&gt;
-          &lt;/b-row&gt;
+          &lt;b-col cols="8"&gt;
+            &lt;b-navbar-nav class="ml-auto"&gt;
+              &lt;b-nav-form&gt;
+                &lt;form @submit.prevent&gt;
+                  &lt;b-row&gt;
+                    &lt;b-col cols="10"&gt;
+                      &lt;b-form-input
+                        size="sm"
+                        placeholder="Search"
+                        v-model="searchInput"
+                      &gt;&lt;/b-form-input&gt;
+                    &lt;/b-col&gt;
+                    &lt;b-col cols="2"&gt;
+                      &lt;b-button
+                        size="sm"
+                        id="searchShows"
+                        class="my-2 my-sm-0"
+                        type="submit"
+                        variant="success"
+                        @click="searchQuery(searchInput)"
+                        &gt;Search&lt;/b-button
+                      &gt;
+                    &lt;/b-col&gt;
+                  &lt;/b-row&gt;
+                &lt;/form&gt;
+              &lt;/b-nav-form&gt;
+            &lt;/b-navbar-nav&gt;
+          &lt;/b-col&gt;
         &lt;/b-navbar-nav&gt;
       &lt;/b-collapse&gt;
     &lt;/b-navbar&gt;
+    
   &lt;/div&gt;
+  
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
@@ -313,12 +338,14 @@ export default {
       searchInput: null,
     };
   },
-  
 &nbsp;
   methods: {
     searchQuery(searchInput) {
-      
-<span class="branch-1 cbranch-no" title="branch not covered" >      this.$router &amp;&amp; this.$router.push({ name: "Search", params: { searchInput } });</span>
+<span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >      this.$router &amp;&amp; this.$router.push({ name: "Search", params: { searchInput } }).catch(err =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >       if (err.name != "NavigationDuplicated") {</span>
+<span class="cstat-no" title="statement not covered" >              throw err;</span>
+       }
+      });
       this.searchInput = "";
     },
   },
@@ -331,17 +358,23 @@ export default {
   background-color: #23180d;
   margin-bottom: 25px;
 }
+.px-md-2 {
+  padding-top: 2rem;
+}
 &nbsp;
 .app-navs {
-  justify-content: center;
+  justify-content: flex-end;
 }
 &nbsp;
 .navbar-nav {
-  display: inline;
+  display: flex;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+}
+.mt-n1 {
+  margin-top: -0.25rem !important;
 }
 &nbsp;
 a {
@@ -356,7 +389,7 @@ a:hover {
   color: #ffffff;
 }
 #brand {
-  color: rgb(221, 25, 25);
+  color: rgb(173, 169, 169);
 }
 &lt;/style&gt;
 &nbsp;</pre></td></tr></table></pre>
@@ -366,7 +399,7 @@ a:hover {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jul 26 2021 08:51:07 GMT+0530 (India Standard Time)
+                at Wed Jul 28 2021 10:47:12 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

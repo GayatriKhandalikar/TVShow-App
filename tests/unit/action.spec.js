@@ -16,6 +16,9 @@ const response = {
       status: "Ended",
       runtime: 60,
       averageRuntime: 60,
+      rating: {
+        "average": 9
+    },
     },
   ],
 };
@@ -64,6 +67,9 @@ map1.set("Drama", [
     status: "Ended",
     type: "Scripted",
     url: "https://www.tvmaze.com/shows/1/under-the-dome",
+    rating: {
+      "average": 9
+  },
   },
 ]);
 map1.set("Science-Fiction", [
@@ -77,6 +83,9 @@ map1.set("Science-Fiction", [
     status: "Ended",
     type: "Scripted",
     url: "https://www.tvmaze.com/shows/1/under-the-dome",
+    rating: {
+      "average": 9
+  },
   },
 ]);
 map1.set("Thriller", [
@@ -90,6 +99,9 @@ map1.set("Thriller", [
     status: "Ended",
     type: "Scripted",
     url: "https://www.tvmaze.com/shows/1/under-the-dome",
+    rating: {
+      "average": 9
+  },
   },
 ]);
 map1.set(undefined, []);

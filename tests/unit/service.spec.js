@@ -1,12 +1,11 @@
 import {getShowsService, getShowDetailsService,getSearchResultsService} from "../../src/service/Service.js"
 import axiosInstance from '../../src/service/axiosConfig.js';
-import axios  from "axios";
-import {mount} from "@vue/test-utils";
 
 jest.mock('../../src/service/axiosConfig.js', () => ({
     baseURL: 'https://api.tvmaze.com',
     get: jest.fn(),
 }));
+
 const response = {
     data: [{
         id: 1,

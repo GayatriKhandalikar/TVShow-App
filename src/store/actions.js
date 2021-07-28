@@ -8,31 +8,35 @@ export default {
   async getShow(context) {
     try {
       const response = await getShowsService();
-      
-      const uniqueGenreSet = new Set([]);
-      const displayShowsBygene = new Map();
-      response.data.forEach((element) => {
+
+      const uniqueGenreSet = new Set([]);  //empty set
+      const displayShowsBygene = new Map();   //empty map
+
+      response.data.forEach((element) => {        //set of Unique genre
         element.genres.forEach((key) => {
           uniqueGenreSet.add(key);
         });
-        
+
       });
 
-      let sortByGenre = Array.from(uniqueGenreSet);
-      
-      for (let index = 0; index < 6; index++) {
+      let sortByGenre = Array.from(uniqueGenreSet);//convert set into array
+      sortByGenre.sort()                           // Alphabetically sort array
+
+      for (let index = 0; index < 6; index++) {        //according to assignment statment few genres among all
         const genreSorting = [];
         response.data.forEach((element) => {
-          element.genres.forEach((value) => {
-            if (sortByGenre[index] == value) genreSorting.push(element);
+          element.genres.forEach((value) => {             //we have array of genres hence again foreach
+            if (sortByGenre[index] == value) genreSorting.push(element);     //check against each genre inside an array
           });
         });
+
         genreSorting.sort((a, b) =>
           a.rating.average > b.rating.average ? -1 : 1
         );
-        displayShowsBygene.set(sortByGenre[index], genreSorting);
+
+        displayShowsBygene.set(sortByGenre[index], genreSorting.slice(0, 8));
       }
-     // console.log(displayShowsBygene)
+
       context.commit("setShows", displayShowsBygene);
     } catch (error) {
       console.log(error.message);

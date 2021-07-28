@@ -23,9 +23,10 @@ describe('In Search Component', () => {
     status: "Ended",
     runtime: 60, 
             }]
-        };
+        },
+        
 
-    const actions = {
+    actions = {
         getSearchResults: jest.fn(),
     };
    
@@ -67,5 +68,8 @@ describe('In Search Component', () => {
         
       
     });
-   
+    it('Cheak flags for image find',async()=>{
+        await  expect(typeof searchInput === 'string').toBe(false)
+       
+      })   
 });

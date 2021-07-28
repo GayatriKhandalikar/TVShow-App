@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.06% </span>
+                <span class="strong">97.14% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>33/34</span>
+                <span class='fraction'>34/35</span>
             </div>
         
             
@@ -43,9 +43,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.88% </span>
+                <span class="strong">96.97% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>31/32</span>
+                <span class='fraction'>32/33</span>
             </div>
         
             
@@ -122,7 +122,10 @@
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,6 +138,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -142,6 +146,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -151,9 +156,11 @@
 <span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -185,7 +192,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
@@ -198,31 +204,35 @@ export default {
   async getShow(context) {
     try {
       const response = await getShowsService();
-      
-      const uniqueGenreSet = new Set([]);
-      const displayShowsBygene = new Map();
-      response.data.forEach((element) =&gt; {
+&nbsp;
+      const uniqueGenreSet = new Set([]);  //empty set
+      const displayShowsBygene = new Map();   //empty map
+&nbsp;
+      response.data.forEach((element) =&gt; {        //set of Unique genre
         element.genres.forEach((key) =&gt; {
           uniqueGenreSet.add(key);
         });
-        
+&nbsp;
       });
 &nbsp;
-      let sortByGenre = Array.from(uniqueGenreSet);
-      
-      for (let index = 0; index &lt; 6; index++) {
+      let sortByGenre = Array.from(uniqueGenreSet);//convert set into array
+      sortByGenre.sort()                           // Alphabetically sort array
+&nbsp;
+      for (let index = 0; index &lt; 6; index++) {        //according to assignment statment few genres among all
         const genreSorting = [];
         response.data.forEach((element) =&gt; {
-          element.genres.forEach((value) =&gt; {
-            if (sortByGenre[index] == value) genreSorting.push(element);
+          element.genres.forEach((value) =&gt; {             //we have array of genres hence again foreach
+            if (sortByGenre[index] == value) genreSorting.push(element);     //check against each genre inside an array
           });
         });
+&nbsp;
         genreSorting.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt;
 <span class="cstat-no" title="statement not covered" >          a.rating.average &gt; b.rating.average ? -1 : 1</span>
         );
-        displayShowsBygene.set(sortByGenre[index], genreSorting);
+&nbsp;
+        displayShowsBygene.set(sortByGenre[index], genreSorting.slice(0, 8));
       }
-     // console.log(displayShowsBygene)
+&nbsp;
       context.commit("setShows", displayShowsBygene);
     } catch (error) {
       console.log(error.message);
@@ -253,15 +263,14 @@ export default {
       throw error;
     }
   },
-};
-&nbsp;</pre></td></tr></table></pre>
+};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jul 26 2021 08:51:07 GMT+0530 (India Standard Time)
+                at Wed Jul 28 2021 10:47:12 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

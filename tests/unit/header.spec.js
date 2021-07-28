@@ -12,6 +12,7 @@ describe("In Header Component", () => {
     localVue.use(BootstrapVue);
     wrapper = shallowMount(Header, {
       localVue,
+     
 
     });
   });
@@ -31,5 +32,28 @@ describe("In Header Component", () => {
   it("should call searchQuery on clicking serch button", async () => {
     await wrapper.find("#searchShows").trigger("click");
 
+  });
+  test("Test description", () => {
+    const t = () => {
+      throw new TypeError();
+    };
+    expect(t).toThrow(TypeError);
+  });
+
+  test("Test description", () => {
+    const t = () => {
+      
+      throw new TypeError("NavigationDuplicated");
+    };
+    expect(t).toThrow(TypeError);
+    expect(t).toThrow("NavigationDuplicated");
+  });
+
+  
+  test('Expect error value ', () => {
+ const searchQuery = jest.fn()
+
+    expect(searchQuery(undefined)).toBeUndefined()
+    expect(searchQuery(undefined)).toBeUndefined();
   });
 });

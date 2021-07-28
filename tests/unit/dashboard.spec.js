@@ -3,15 +3,16 @@ import Dashboard from "@/views/Dashboard.vue";
 import BootstrapVue from 'bootstrap-vue';
 import Vuex from 'vuex';
 
+
 describe('In Dashboard Component ',()=>{
     let wrapper;
     const state = {
         tvShows:[{
             id: 1,
-    url: "https://www.tvmaze.com/shows/1/under-the-dome",
-    name: "Under the Dome",
-    type: "Scripted",
-    language: "English",
+            url: "https://www.tvmaze.com/shows/1/under-the-dome",
+            name: "Under the Dome",
+            type: "Scripted",
+            language: "English",
         }],
     };
 
@@ -33,7 +34,14 @@ describe('In Dashboard Component ',()=>{
         wrapper = shallowMount(Dashboard, {
             localVue,
             store,
+            data() {
+                return {
+                    isLoading: false,
+                   
+                };
+            },
         });
+      
     });
 
     afterEach(() =>{
@@ -49,10 +57,6 @@ describe('In Dashboard Component ',()=>{
     });
 
     it('getShow action should be called on calling getShow method', ()=>{
-            // const t = () => {
-            //   throw new TypeError();
-            // };
-            // expect(t).toThrow(TypeError);
             wrapper.vm.getShow();
             expect(actions.getShow).toHaveBeenCalled();
            

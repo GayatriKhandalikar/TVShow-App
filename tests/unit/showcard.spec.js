@@ -45,5 +45,10 @@ describe('In Showcard Component', () => {
 
    test('should call getShowDetails on clicking Get Details button',async () => {
       wrapper.vm.getShowDetails(1);
-      });   
+      });
+      
+      it('Cheak flags for image find',async()=>{
+        await  expect(typeof imageFlag === 'boolean').toBe(false)
+      })
+     
 });
